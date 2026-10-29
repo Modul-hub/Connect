@@ -19,10 +19,15 @@ navBtns.forEach(btn => {
 
             document.querySelectorAll('.proxy-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    window.location.href = btn.getAttribute('data-url');
+    const url = btn.getAttribute('data-url');
+
+    // Открываем через временную ссылку — так браузер сразу
+    // передаёт tg:// в Telegram и не «зависает» в загрузке
+    const link = document.createElement('a');
+    link.href = url;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   });
 });
             
-        }
-    });
-});
