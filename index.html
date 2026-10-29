@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Главное меню -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Modul Hub – Ваш доступ к свободному интернету!</h1>
+            <nav class="nav">
+                <button class="nav-btn active" data-tab="mtproto">MTProto</button>
+                <button class="nav-btn" data-tab="free">Free Подписки</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Описание -->
+    <section class="intro">
+        <div class="container">
+            <p class="intro-text">Выберите раздел, который вам нужен</p>
+        </div>
+    </section>
+
+    <!-- Основной контент с переключением -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Вкладка 1: MTProto (открыта по умолчанию) -->
+            <div id="mtproto" class="tab-content active">
+                <h2>Настройка MTProto</h2>
+                <p>Здесь будет информация о протоколе MTProto, ссылки на прокси и инструкции по настройке.</p>
+                <div class="card">
+                    <h3>Преимущества MTProto</h3>
+                    <ul>
+                        <li>Высокая скорость соединения</li>
+                        <li>Шифрование трафика</li>
+                        <li>Стабильная работа в сетях с ограничениями</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Вкладка 2: Free Подписки (скрыта по умолчанию) -->
+            <div id="free" class="tab-content">
+                <h2>Бесплатные подписки</h2>
+                <p>Здесь будут публиковаться актуальные бесплатные доступы и промокоды.</p>
+                <div class="card">
+                    <h3>Как получить доступ</h3>
+                    <ol>
+                        <li>Нажмите кнопку "Получить" ниже.</li>
+                        <li>Скопируйте сгенерированную ссылку.</li>
+                        <li>Вставьте её в ваше приложение.</li>
+                    </ol>
+                    <button class="cta-btn">Получить Free подписку</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+  </html>
