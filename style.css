@@ -1,0 +1,165 @@
+/* Сброс стандартных отступов браузера */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Фон: плавный градиент от голубого к белому */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(180deg, #89CFF0 0%, #ffffff 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Центральный блок для контента */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Главное меню */
+.header {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #005792;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Навигация (кнопки разделов) */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #0077b6;
+    background-color: transparent;
+    color: #0077b6;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #0077b6;
+    color: #ffffff;
+}
+
+.nav-btn.active {
+    background-color: #0077b6;
+    color: #ffffff;
+}
+
+/* Описание под заголовком */
+.intro {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #005792;
+}
+
+/* Основной контент */
+.main-content {
+    padding: 20px 0 60px;
+}
+
+/* Контент вкладок */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease-in;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Карточки внутри разделов */
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 30px;
+    border: 1px solid #d1e8f7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #005792;
+}
+
+.card ul, .card ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.card li {
+    margin-bottom: 10px;
+}
+
+/* Кнопка действия */
+.cta-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #0077b6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #005792;
+}
+
+/* Плавное появление */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+    .nav-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
