@@ -16,6 +16,13 @@ navBtns.forEach(btn => {
         const activeTab = document.getElementById(btn.dataset.tab);
         if (activeTab) {
             activeTab.classList.add('active');
+
+            document.querySelectorAll('.proxy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    window.location.href = btn.getAttribute('data-url');
+  });
+});
+            
         }
     });
 });
