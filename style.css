@@ -9,7 +9,12 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(180deg, #89CFF0 0%, #ffffff 100%);
+    background: linear-gradient(
+        180deg,
+        #93D4FF 0%, /* Верхняя часть — насыщенный голубой */
+        #E7F5FE 20%, /* Средняя часть — светлый голубой оттенок */
+        #FFFFFF 100% /* Нижняя часть — чистый белый цвет */
+    );
     min-height: 100vh;
     color: #333;
 }
